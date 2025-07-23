@@ -107,9 +107,8 @@ mkdir ~/.themeRepos
 
 # Install themes
 
-cd ~/.themeRepos || exit
-
 echo "----- Installing gtk & libadwaita theme"
+cd ~/.themeRepos || exit
 git clone git@github.com:vinceliuice/MacTahoe-gtk-theme.git
 
 cd ~/.themeRepos/MacTahoe-gtk-theme || exit
@@ -118,6 +117,7 @@ cd ~/.themeRepos/MacTahoe-gtk-theme || exit
 ./install.sh -l -t pink -o solid
 
 echo "----- Installing icon theme"
+cd ~/.themeRepos || exit
 git clone git@github.com:vinceliuice/MacTahoe-icon-theme.git
 
 cd ~/.themeRepos/MacTahoe-icon-theme || exit
