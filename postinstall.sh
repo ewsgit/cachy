@@ -112,7 +112,7 @@ cd ~/.themeRepos || exit
 echo "----- Installing gtk & libadwaita theme"
 git clone git@github.com:vinceliuice/MacTahoe-gtk-theme.git
 
-cd ~/.themeRepos/MacTahoe-git-theme || exit
+cd ~/.themeRepos/MacTahoe-gtk-theme || exit
 
 ./install.sh -t pink -o solid
 ./install.sh -l -t pink -o solid
