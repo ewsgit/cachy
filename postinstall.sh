@@ -4,7 +4,7 @@
 
 echo "Performing post-installation steps for Ewsgit's CachyOS configuration."
 
-if [ "$(pwd)" != "~/cachy" ]; then
+if [ "$(pwd)" != "$HOME/cachy" ]; then
     echo "Error: You should be in the ~/cachy directory."
     exit 1
 else
