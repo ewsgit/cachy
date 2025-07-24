@@ -133,5 +133,8 @@ cp ~/cachy/assets/MacOS-Tahoe-Cursor -r ~/.icons/
 echo "----- Installing Oh My Zsh"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
+echo "----- Installing NVM (Node version manager)"
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
+
 echo "----- Installing NVChad"
 git clone https://github.com/NvChad/starter ~/.config/nvim
