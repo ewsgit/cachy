@@ -95,6 +95,9 @@ flatpak install flathub org.gnome.Showtime
 echo "----- Installing Maps (Mapping and Navigation)"
 flatpak install flathub org.gnome.Maps
 
+echo "----- Installing Sober (Roblox on linux)"
+flatpak install flathub org.vinegarhq.Sober 
+
 # Bun Runtime
 
 echo "----- Installing Bun"
