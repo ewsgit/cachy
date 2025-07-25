@@ -90,6 +90,9 @@ paru --noconfirm -S thunderbird
 echo "----- Installing Spotify"
 paru --noconfirm -S spotify
 
+echo "----- Installing Google Chrome"
+paru --noconfirm -S google-chrome
+
 # Flatpak
 
 echo "----- Installing Parabolic (Online video downloader)"
