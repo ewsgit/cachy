@@ -81,6 +81,12 @@ paru --noconfirm -S ttf-jetbrains-mono ttf-jetbrains-mono-nerd ttf-iosevka-nerd 
 echo "----- Installing Neovim (Code editor)"
 paru --noconfirm -S neovim
 
+echo "----- Installing Modrinth (Minecraft Mod loader)"
+paru --noconfirm -S modrinth-app-bin
+
+echo "----- Installing Thunderbird"
+paru --noconfirm -S thunderbird
+
 # Flatpak
 
 echo "----- Installing Parabolic (Online video downloader)"
