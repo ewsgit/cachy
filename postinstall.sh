@@ -87,6 +87,9 @@ paru --noconfirm -S modrinth-app-bin
 echo "----- Installing Thunderbird"
 paru --noconfirm -S thunderbird
 
+echo "----- Installing Spotify"
+paru --noconfirm -S spotify
+
 # Flatpak
 
 echo "----- Installing Parabolic (Online video downloader)"
