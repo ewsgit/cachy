@@ -72,8 +72,8 @@ paru --noconfirm -S ttf-ms-win11-auto
 echo "----- Installing Jetbrains Toolbox (Jetbrains tools management)"
 paru --noconfirm -S jetbrains-toolbox
 
-echo "----- Installing Zed (Code editor)"
-paru --noconfirm -S zed
+echo "----- Installing Zed Preview (Code editor)"
+paru --noconfirm -S zed-preview-bin
 
 echo "----- Installing Programming fonts (General programming fonts)"
 paru --noconfirm -S ttf-jetbrains-mono ttf-jetbrains-mono-nerd ttf-iosevka-nerd ttf-meslo-nerd ttf-fira-code ttf-space-mono-nerd ttf-zed-mono-nerd
@@ -153,3 +153,13 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
 
 echo "----- Installing NVChad"
 git clone https://github.com/NvChad/starter ~/.config/nvim
+
+echo "----- Installing Vencord"
+sh -c "$(curl -sS https://raw.githubusercontent.com/Vendicated/VencordInstaller/main/install.sh)"
+
+echo "----- Installing Spicetify"
+curl -fsSL https://raw.githubusercontent.com/spicetify/cli/main/install.sh | sh
+sudo chown $USER /opt/spotify/ -R
+spicetify backup apply
+spicetify config sidebar_config 0
+spicetify apply
