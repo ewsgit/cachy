@@ -163,3 +163,6 @@ sudo chown $USER /opt/spotify/ -R
 spicetify backup apply
 spicetify config sidebar_config 0
 spicetify apply
+
+echo "----- Configuring Git"
+git config --global core.editor "nvim"
