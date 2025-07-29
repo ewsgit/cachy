@@ -113,6 +113,9 @@ flatpak install flathub org.gnome.Maps
 echo "----- Installing Sober (Roblox on linux)"
 flatpak install flathub org.vinegarhq.Sober 
 
+echo "----- Installing Minecraft Bedrock"
+flatpak install flathub io.mrarm.mcpelauncher
+
 # Bun Runtime
 
 echo "----- Installing Bun"
