@@ -93,6 +93,9 @@ paru --noconfirm -S spotify
 echo "----- Installing Google Chrome"
 paru --noconfirm -S google-chrome
 
+echo "----- Installing ProtonVPN"
+paru --noconfirm -S proton-vpn-gtk-app
+
 # Flatpak
 
 echo "----- Installing Parabolic (Online video downloader)"
