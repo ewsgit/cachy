@@ -115,7 +115,7 @@ echo "----- Installing Maps (Mapping and Navigation)"
 flatpak install flathub org.gnome.Maps
 
 echo "----- Installing Sober (Roblox on linux)"
-flatpak install flathub org.vinegarhq.Sober 
+flatpak install flathub org.vinegarhq.Sober
 
 echo "----- Installing Minecraft Bedrock"
 flatpak install flathub io.mrarm.mcpelauncher
@@ -176,3 +176,4 @@ spicetify apply
 
 echo "----- Configuring Git"
 git config --global core.editor "nvim"
+git config --global init.defaultBranch
