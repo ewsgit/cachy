@@ -96,6 +96,10 @@ paru --noconfirm -S google-chrome
 echo "----- Installing ProtonVPN"
 paru --noconfirm -S proton-vpn-gtk-app
 
+echo "----- Installing Postgresql"
+paru --noconfirm -S postgresql
+echo "Remember to initialize the postgres database from the postgres user account as the database does not exist by default and will refuse all non-socket connections"
+
 # Flatpak
 
 echo "----- Installing Parabolic (Online video downloader)"
