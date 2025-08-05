@@ -125,6 +125,11 @@ flatpak install flathub io.mrarm.mcpelauncher
 echo "----- Installing Bun"
 curl -fsSL https://bun.sh/install | bash
 
+# Rust
+
+echo "----- Insatlling Rustup (Rust)"
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
 # Directory Creation
 
 mkdir ~/Projects
@@ -135,6 +140,7 @@ mkdir ~/.themeRepos
 echo "----- Installing gtk & libadwaita theme"
 cd ~/.themeRepos || exit
 git clone git@github.com:vinceliuice/MacTahoe-gtk-theme.git
+git pull --force
 
 cd ~/.themeRepos/MacTahoe-gtk-theme || exit
 
@@ -144,6 +150,7 @@ cd ~/.themeRepos/MacTahoe-gtk-theme || exit
 echo "----- Installing icon theme"
 cd ~/.themeRepos || exit
 git clone git@github.com:vinceliuice/MacTahoe-icon-theme.git
+git pull --force
 
 cd ~/.themeRepos/MacTahoe-icon-theme || exit
 
