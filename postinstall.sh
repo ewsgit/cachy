@@ -120,6 +120,9 @@ flatpak install flathub org.vinegarhq.Sober
 echo "----- Installing Minecraft Bedrock"
 flatpak install flathub io.mrarm.mcpelauncher
 
+echo "----- Installing Blockbench"
+flatpak install flathub net.blockbench.Blockbench
+
 # Bun Runtime
 
 echo "----- Installing Bun"
@@ -176,6 +179,9 @@ sh -c "$(curl -sS https://raw.githubusercontent.com/Vendicated/VencordInstaller/
 
 echo "----- Installing Spicetify"
 curl -fsSL https://raw.githubusercontent.com/spicetify/cli/main/install.sh | sh
+
+source ~/.zshrc
+
 sudo chown $USER /opt/spotify/ -R
 spicetify backup apply
 spicetify config sidebar_config 0
