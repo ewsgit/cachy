@@ -8,10 +8,13 @@ if [ "$(pwd)" != "$HOME/cachy" ]; then
     echo "Error: You should be in the ~/cachy directory."
     exit 1
 else
-    echo "You are in the ~/cachy directory. Continuing with the rest of the script..."
+    echo "You are in the ~/cachy directory. Continuing script execution..."
 fi
 
 echo "Please ensure github's ssh key is setup before running this script"
+
+echo "Attempting to sync remote changes"
+git pull
 
 # Arch Repository & AUR
 
@@ -99,6 +102,10 @@ paru --noconfirm -S proton-vpn-gtk-app
 echo "----- Installing Postgresql"
 paru --noconfirm -S postgresql
 echo "Remember to initialize the postgres database from the postgres user account as the database does not exist by default and will refuse all non-socket connections"
+echo "For more information, check the archlinux wiki"
+
+echo "----- Installing Brave"
+paru --noconfirm -S brave
 
 # Flatpak
 
@@ -122,6 +129,9 @@ flatpak install flathub io.mrarm.mcpelauncher
 
 echo "----- Installing Blockbench"
 flatpak install flathub net.blockbench.Blockbench
+
+echo "----- Installing Errands (TODO list)"
+flatpak install flathub io.github.mrvladus.List
 
 # Bun Runtime
 
@@ -152,7 +162,9 @@ cd ~/.themeRepos/MacTahoe-gtk-theme || exit
 
 echo "----- Installing icon theme"
 cd ~/.themeRepos || exit
+echo "----- Cloning MacTahoe icon theme from GitHub"
 git clone git@github.com:vinceliuice/MacTahoe-icon-theme.git
+echo "----- Syncing remote changes"
 git pull --force
 
 cd ~/.themeRepos/MacTahoe-icon-theme || exit
@@ -161,6 +173,9 @@ cd ~/.themeRepos/MacTahoe-icon-theme || exit
 
 echo "----- Installing cursor theme"
 mkdir ~/.icons
+echo "----- Ensuring cursor theme location is free"
+rm ~/cachy/assets/MacOS-Tahoe-Cursor -rf
+echo "----- Copying cursor theme assets"
 cp ~/cachy/assets/MacOS-Tahoe-Cursor -r ~/.icons/
 
 # Install Oh My Zsh
@@ -171,10 +186,10 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 echo "----- Installing NVM (Node version manager)"
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
 
-echo "----- Installing NVChad"
+echo "----- Installing NVChad (Neovim configuration)"
 git clone https://github.com/NvChad/starter ~/.config/nvim
 
-echo "----- Installing Vencord"
+echo "----- Installing Vencord (Discord modded client patches)"
 sh -c "$(curl -sS https://raw.githubusercontent.com/Vendicated/VencordInstaller/main/install.sh)"
 
 echo "----- Installing Spicetify"
@@ -188,5 +203,10 @@ spicetify config sidebar_config 0
 spicetify apply
 
 echo "----- Configuring Git"
+echo "----- Setting default git editor to Neovim"
 git config --global core.editor "nvim"
-git config --global init.defaultBranch
+echo "----- Setting default branch name to 'master' for git"
+git config --global init.defaultBranch "master"
+
+echo "----- Copying ZSH configuration files"
+cp ./.zshrc ~/.zshrc
