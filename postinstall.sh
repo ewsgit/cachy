@@ -160,6 +160,8 @@ cd ~/.themeRepos/MacTahoe-gtk-theme || exit
 ./install.sh -t pink -o solid
 ./install.sh -l -t pink -o solid
 
+cd ~/cachy
+
 echo "----- Installing icon theme"
 cd ~/.themeRepos || exit
 echo "----- Cloning MacTahoe icon theme from GitHub"
@@ -170,6 +172,8 @@ git pull --force
 cd ~/.themeRepos/MacTahoe-icon-theme || exit
 
 ./install.sh -t pink -b
+
+cd ~/cachy
 
 echo "----- Installing cursor theme"
 mkdir ~/.icons
