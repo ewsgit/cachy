@@ -1,0 +1,8 @@
+[19:13:49 2025-08-14] FETCHING Version 2.41.0
+[19:13:49 2025-08-14] DOWNLOADING https://github.com/spicetify/cli/releases/download/v2.41.0/spicetify-2.41.0-linux-amd64.tar.gz
+[19:13:50 2025-08-14] EXTRACTING /home/ewsgit/.spicetify/spicetify.tar.gz
+[19:13:50 2025-08-14] SETTING EXECUTABLE PERMISSIONS TO /home/ewsgit/.spicetify/spicetify
+[19:13:50 2025-08-14] REMOVING /home/ewsgit/.spicetify/spicetify.tar.gz
+[19:13:50 2025-08-14] spicetify path already set in /home/ewsgit/.config/fish/config.fish, continuing...
+[19:13:50 2025-08-14] spicetify v2.41.0 was installed successfully to /home/ewsgit/.spicetify
+[19:13:50 2025-08-14] Run 'spicetify --help' to get started

@@ -21,6 +21,14 @@ git pull
 echo "----- Sync package repositories"
 paru -Syu
 
+echo "----- Installing flatpak"
+paru --noconfirm -S flatpak
+
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+
+echo "----- Installing Gnome Software"
+paru --noconfirm -S gnome-software
+
 echo "----- Installing Ghostty (terminal)"
 paru --noconfirm -S ghostty
 
