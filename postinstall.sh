@@ -116,7 +116,7 @@ echo "----- Installing Brave"
 paru --noconfirm -S brave
 
 echo "----- Installing Docker"
-paru --noconfirm -S docker
+paru --noconfirm -S docker docker-compose
 
 # Flatpak
 
