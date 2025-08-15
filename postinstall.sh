@@ -115,31 +115,37 @@ echo "For more information, check the archlinux wiki"
 echo "----- Installing Brave"
 paru --noconfirm -S brave
 
+echo "----- Installing Docker"
+paru --noconfirm -S docker
+
 # Flatpak
 
 echo "----- Installing Parabolic (Online video downloader)"
-flatpak install flathub org.nickvision.tubeconverter
+flatpak install --noninteractive flathub org.nickvision.tubeconverter
 
 echo "----- Installing Cartridges (Game launcher)"
-flatpak install flathub page.kramo.Cartridges
+flatpak install --noninteractive flathub page.kramo.Cartridges
 
 echo "----- Installing Showtime (Video player)"
-flatpak install flathub org.gnome.Showtime
+flatpak install --noninteractive flathub org.gnome.Showtime
 
 echo "----- Installing Maps (Mapping and Navigation)"
-flatpak install flathub org.gnome.Maps
+flatpak install --noninteractive flathub org.gnome.Maps
 
 echo "----- Installing Sober (Roblox on linux)"
-flatpak install flathub org.vinegarhq.Sober
+flatpak install --noninteractive flathub org.vinegarhq.Sober
 
 echo "----- Installing Minecraft Bedrock"
-flatpak install flathub io.mrarm.mcpelauncher
+flatpak install --noninteractive flathub io.mrarm.mcpelauncher
 
 echo "----- Installing Blockbench"
-flatpak install flathub net.blockbench.Blockbench
+flatpak install --noninteractive flathub net.blockbench.Blockbench
 
 echo "----- Installing Errands (TODO list)"
-flatpak install flathub io.github.mrvladus.List
+flatpak install --noninteractive flathub io.github.mrvladus.List
+
+echo "----- Installing Podman (Docker container GUI management)"
+flatpak install --noninteractive flathub io.podman_desktop.PodmanDesktop
 
 # Bun Runtime
 
