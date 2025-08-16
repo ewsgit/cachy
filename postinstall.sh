@@ -38,6 +38,12 @@ paru --noconfirm -S ocs-url
 echo "----- Installing Steam (game store)"
 paru --noconfirm -S steam
 
+echo "----- Installing FastFetch"
+paru --noconfirm -S fastfetch
+
+echo "----- Installing Hyfetch"
+paru --noconfirm -S hyfetch
+
 echo "----- Installing Lutris (linux games WINE manager)"
 paru --noconfirm -S lutris
 
