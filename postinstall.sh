@@ -124,6 +124,9 @@ paru --noconfirm -S brave
 echo "----- Installing Docker"
 paru --noconfirm -S docker docker-compose docker-buildx
 
+echo "----- Installing Minecraft Bedrock"
+paru --noconfirm -S mcpelauncher-linux mcpelauncher-ui
+
 # Flatpak
 
 echo "----- Installing Parabolic (Online video downloader)"
@@ -140,9 +143,6 @@ flatpak install --noninteractive flathub org.gnome.Maps
 
 echo "----- Installing Sober (Roblox on linux)"
 flatpak install --noninteractive flathub org.vinegarhq.Sober
-
-echo "----- Installing Minecraft Bedrock"
-flatpak install --noninteractive flathub io.mrarm.mcpelauncher
 
 echo "----- Installing Blockbench"
 flatpak install --noninteractive flathub net.blockbench.Blockbench
@@ -177,8 +177,8 @@ git pull --force
 
 cd ~/.themeRepos/MacTahoe-gtk-theme || exit
 
-./install.sh -t pink -o solid
-./install.sh -l -t pink -o solid
+./install.sh -o solid
+./install.sh -l -o solid
 
 cd ~/cachy
 
@@ -191,14 +191,14 @@ git pull --force
 
 cd ~/.themeRepos/MacTahoe-icon-theme || exit
 
-./install.sh -t pink -b
+./install.sh -b
 
 cd ~/cachy
 
 echo "----- Installing cursor theme"
 mkdir ~/.icons
 echo "----- Ensuring cursor theme location is free"
-rm ~/cachy/assets/MacOS-Tahoe-Cursor -rf
+rm ~/.icons/MacOS-Tahoe-Cursor -rf
 echo "----- Copying cursor theme assets"
 cp ~/cachy/assets/MacOS-Tahoe-Cursor -r ~/.icons/
 
