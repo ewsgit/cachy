@@ -127,6 +127,9 @@ paru --noconfirm -S docker docker-compose docker-buildx
 echo "----- Installing Minecraft Bedrock"
 paru --noconfirm -S mcpelauncher-linux mcpelauncher-ui
 
+echo "----- Installing Proton Pass (Password manager)"
+paru --noconfirm -S proton-pass-bin
+
 # Flatpak
 
 echo "----- Installing Parabolic (Online video downloader)"
