@@ -63,40 +63,13 @@ curl -fsSL https://bun.sh/install | bash
 
 # Rust
 
-echo "----- Insatlling Rustup (Rust)"
+echo "----- Installing RustUp (Rust)"
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 # Directory Creation
 
 mkdir ~/Projects
 mkdir ~/.themeRepos
-
-# Install themes
-
-echo "----- Installing gtk & libadwaita theme"
-cd ~/.themeRepos || exit
-git clone git@github.com:vinceliuice/MacTahoe-gtk-theme.git
-git pull --force
-
-cd ~/.themeRepos/MacTahoe-gtk-theme || exit
-
-./install.sh -o solid
-./install.sh -l -o solid
-
-cd ~/cachy
-
-echo "----- Installing icon theme"
-cd ~/.themeRepos || exit
-echo "----- Cloning MacTahoe icon theme from GitHub"
-git clone git@github.com:vinceliuice/MacTahoe-icon-theme.git
-echo "----- Syncing remote changes"
-git pull --force
-
-cd ~/.themeRepos/MacTahoe-icon-theme || exit
-
-./install.sh -b
-
-cd ~/cachy
 
 echo "----- Installing cursor theme"
 mkdir ~/.icons
@@ -111,16 +84,16 @@ echo "----- Installing Oh My Zsh"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 echo "----- Installing NVM (Node version manager)"
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh)"
 
 echo "----- Installing NVChad (Neovim configuration)"
 git clone https://github.com/NvChad/starter ~/.config/nvim
 
 echo "----- Installing Vencord (Discord modded client patches)"
-sh -c "$(curl -sS https://raw.githubusercontent.com/Vendicated/VencordInstaller/main/install.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/Vendicated/VencordInstaller/main/install.sh)"
 
 echo "----- Installing Spicetify"
-curl -fsSL https://raw.githubusercontent.com/spicetify/cli/main/install.sh | sh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/spicetify/cli/main/install.sh)"
 
 source ~/.zshrc
 
