@@ -2,14 +2,14 @@
 
 # Copyright (C) 2025 Ewsgit<ewsgit@ewsgit.uk>
 
-echo "Performing post-installation steps for Ewsgit's CachyOS configuration."
+#echo "Performing post-installation steps for Ewsgit's CachyOS configuration."
 
-if [ "$(pwd)" != "$HOME/cachy" ]; then
-    echo "Error: You should be in the ~/cachy directory."
-    exit 1
-else
-    echo "You are in the ~/cachy directory. Continuing script execution..."
-fi
+#if [ "$(pwd)" != "$HOME/cachy" ]; then
+#    echo "Error: You should be in the ~/cachy directory."
+#    exit 1
+#else
+#    echo "You are in the ~/cachy directory. Continuing script execution..."
+#fi
 
 echo "Please ensure github's ssh key is setup before running this script"
 
@@ -24,8 +24,8 @@ paru -Syu
 echo "----- Installing flatpak"
 paru --noconfirm -S flatpak
 
-flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-paru --noconfirm -S gnome-software ghostty ocs-url steam fastfetch hyfetch lutris discord vesktop visual-studio-code-bin figma-linux protonplus gimp blender eza resources obsidian extension-manager gnome-software ttf-ms-win11-auto jetbrains-toolbox zed-preview-bin ttf-jetbrains-mono ttf-jetbrains-mono-nerd ttf-iosevka-nerd ttf-meslo-nerd ttf-fira-code ttf-space-mono-nerd ttf-zed-mono-nerd neovim modrinth-app-bin thunderbird spotify google-chrome proton-vpn-gtk-app postgresql brave docker docker-compose docker-buildx mcpelauncher-linux mcpelauncher-ui proton-pass-bin
+# flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+paru --noconfirm -S gnome-software ghostty ocs-url steam fastfetch hyfetch lutris discord vesktop visual-studio-code-bin figma-linux protonplus gimp blender eza resources obsidian extension-manager gnome-software ttf-ms-win11-auto jetbrains-toolbox zed-preview-bin ttf-jetbrains-mono ttf-jetbrains-mono-nerd ttf-iosevka-nerd ttf-meslo-nerd ttf-fira-code ttf-space-mono-nerd ttf-zed-mono-nerd neovim thunderbird spotify proton-vpn-gtk-app postgresql helium-browser-bin mcpelauncher-linux mcpelauncher-ui proton-pass-bin prismlauncher
 echo "Remember to initialize the postgres database from the postgres user account as the database does not exist by default and will refuse all non-socket connections"
 echo "For more information, check the archlinux wiki"
 
@@ -33,33 +33,33 @@ echo "For more information, check the archlinux wiki"
 # Flatpak
 
 echo "----- Installing Parabolic (Online video downloader)"
-flatpak install --noninteractive flathub org.nickvision.tubeconverter
+# flatpak install --noninteractive flathub org.nickvision.tubeconverter
 
 echo "----- Installing Cartridges (Game launcher)"
-flatpak install --noninteractive flathub page.kramo.Cartridges
+# flatpak install --noninteractive flathub page.kramo.Cartridges
 
 echo "----- Installing Showtime (Video player)"
-flatpak install --noninteractive flathub org.gnome.Showtime
+# flatpak install --noninteractive flathub org.gnome.Showtime
 
 echo "----- Installing Maps (Mapping and Navigation)"
-flatpak install --noninteractive flathub org.gnome.Maps
+# flatpak install --noninteractive flathub org.gnome.Maps
 
 echo "----- Installing Sober (Roblox on linux)"
-flatpak install --noninteractive flathub org.vinegarhq.Sober
+# flatpak install --noninteractive flathub org.vinegarhq.Sober
 
 echo "----- Installing Blockbench"
-flatpak install --noninteractive flathub net.blockbench.Blockbench
+# flatpak install --noninteractive flathub net.blockbench.Blockbench
 
 echo "----- Installing Errands (TODO list)"
-flatpak install --noninteractive flathub io.github.mrvladus.List
+# flatpak install --noninteractive flathub io.github.mrvladus.List
 
 echo "----- Installing Podman (Docker container GUI management)"
-flatpak install --noninteractive flathub io.podman_desktop.PodmanDesktop
+# flatpak install --noninteractive flathub io.podman_desktop.PodmanDesktop
 
 # Bun Runtime
 
 echo "----- Installing Bun"
-curl -fsSL https://bun.sh/install | bash
+#curl -fsSL https://bun.sh/install | bash
 
 # Rust
 
@@ -71,36 +71,36 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 mkdir ~/Projects
 mkdir ~/.themeRepos
 
-echo "----- Installing cursor theme"
-mkdir ~/.icons
-echo "----- Ensuring cursor theme location is free"
-rm ~/.icons/MacOS-Tahoe-Cursor -rf
-echo "----- Copying cursor theme assets"
-cp ~/cachy/assets/MacOS-Tahoe-Cursor -r ~/.icons/
+#echo "----- Installing cursor theme"
+#mkdir ~/.icons
+#echo "----- Ensuring cursor theme location is free"
+#rm ~/.icons/MacOS-Tahoe-Cursor -rf
+#echo "----- Copying cursor theme assets"
+#cp ~/cachy/assets/MacOS-Tahoe-Cursor -r ~/.icons/
 
 # Install Oh My Zsh
 
 echo "----- Installing Oh My Zsh"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-echo "----- Installing NVM (Node version manager)"
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh)"
+#echo "----- Installing NVM (Node version manager)"
+#sh -c "$(curl -fsSL https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh)"
 
-echo "----- Installing NVChad (Neovim configuration)"
-git clone https://github.com/NvChad/starter ~/.config/nvim
+#echo "----- Installing NVChad (Neovim configuration)"
+#git clone https://github.com/NvChad/starter ~/.config/nvim
 
-echo "----- Installing Vencord (Discord modded client patches)"
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/Vendicated/VencordInstaller/main/install.sh)"
+#echo "----- Installing Vencord (Discord modded client patches)"
+#sh -c "$(curl -fsSL https://raw.githubusercontent.com/Vendicated/VencordInstaller/main/install.sh)"
 
-echo "----- Installing Spicetify"
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/spicetify/cli/main/install.sh)"
+#echo "----- Installing Spicetify"
+#sh -c "$(curl -fsSL https://raw.githubusercontent.com/spicetify/cli/main/install.sh)"
 
-source ~/.zshrc
+#source ~/.zshrc
 
-sudo chown $USER /opt/spotify/ -R
-spicetify backup apply
-spicetify config sidebar_config 0
-spicetify apply
+#sudo chown $USER /opt/spotify/ -R
+#spicetify backup apply
+#spicetify config sidebar_config 0
+#spicetify apply
 
 echo "----- Configuring Git"
 echo "----- Setting default git editor to Neovim"
